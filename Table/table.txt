@@ -1,0 +1,145 @@
+HTML Table Tags
+
+Tag	Description
+<table> 	Defines a table
+<th>  	Defines a header cell in a table
+<tr>  	Defines a row in a table
+<td>  	Defines a cell in a table
+<caption> 	Defines a table caption
+<colgroup>  	Specifies a group of one or more columns in a table for formatting
+<col> 	Specifies column properties for each column within a <colgroup> element
+<thead> 	Groups the header content in a table
+<tbody> 	Groups the body content in a table
+<tfoot> 	Groups the footer content in a table
+
+Example 
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+1. Html add border
+
+table, th, td {
+  border: 1px solid black;
+}
+
+2. HTML Table - Collapsed Borders
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+HTML Table - Add Cell Padding
+
+th, td {
+  padding: 15px;
+}
+
+HTML Table - Left-align Headings
+
+th {
+  text-align: left;
+}
+
+HTML Table - Add Border Spacing
+
+table {
+  border-spacing: 5px;
+}
+
+HTML Table - Cell that Spans Many Columns
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>55577854</td>
+    <td>55577855</td>
+  </tr>
+</table>
+
+HTML Table - Cell that Spans Many Rows
+
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+</table>
+
+HTML Table - Add a Caption
+
+<table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+
+A Special Style for One Table
+
+<table id="t01">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+Now you can define a special style for this table:
+#t01 {
+  width: 100%;
+  background-color: #f1f1c1;
+}
+
+And add more styles:
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+#t01 th {
+  color: white;
+  background-color: black;
+}
